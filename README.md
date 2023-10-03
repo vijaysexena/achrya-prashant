@@ -8,7 +8,7 @@ Before you begin, make sure you have the following prerequisites installed on yo
 
 Angular requires Node.js and npm (Node Package Manager) to be installed. You can download and install them from the official website:
 
-- [Terraform](https://www.terraform.io/downloads.html) and npm.
+- [nodejs]([https://www.terraform.io/downloads.html](https://nodejs.org/dist/v20.8.0/node-v20.8.0-x64.msi)) and npm.
 
 To check if Node.js and npm are already installed, open your terminal and run the following commands:
 
@@ -29,7 +29,7 @@ This command will install the Angular CLI globally on your system.
 
 You'll need Git to clone the Angular project from GitHub. If you don't have Git installed, you can download it from:
 
-- [Git]("https://git-scm.com/download/win")
+- [Git](https://git-scm.com/download/win)
   To check if Git is installed, run the following command:
 
 **git --version**
