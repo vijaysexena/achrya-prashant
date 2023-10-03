@@ -1,0 +1,147 @@
+<app-header></app-header>
+<main class="px-3">
+  <!-- quick search -->
+  <app-search-bar></app-search-bar>
+  <!-- heading -->
+  <section class="heading-section">
+    <div class="container-fluid mb-5">
+      <div>
+        <h4 class="h4 fw-600 mb-3">{{ courseDetails.details.title }}</h4>
+      </div>
+      <div class="row">
+        <div class="col-4">
+          <img
+            [src]="getThumbnailUrl()"
+            alt="video series image"
+            class="img-fluid"
+            width="500px"
+          />
+          <p class="mt-3 mb-0 fw-600">Share this series:</p>
+          <div class="d-flex gap-2">
+            <div
+              class="icon-link btn btn-link fs-4 btn-sm"
+              *ngFor="let icon of icons"
+            >
+              <i [class]="'bi bi-' + icon"></i>
+            </div>
+          </div>
+        </div>
+        <div class="col-8">
+          <h6 class="h6 fw-600">{{ courseDetails.details.subtitle }}</h6>
+          <p class="text-muted">
+            {{ courseDetails.details.description }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- video series section -->
+  <section class="video-series">
+    <div class="px-4">
+      <h5 class="h5 fw-600">Video series(8)</h5>
+    </div>
+    <div class="container-fluid px-4">
+      <div class="row row-cols-4 g-5">
+        <div
+          class="card border-0 mb-2 card-hover"
+          style="width: 23rem"
+          *ngFor="let course of courseData; let i = index"
+        >
+          <div class="card-header">
+            <span
+              class="badge bg-secondary rounded-1 span-badge position-relative"
+              >भाग <span [innerHTML]="course.series.order.seq"></span>
+            </span>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title fw-600 fs-6 mb-3">{{ course.title }}</h5>
+            <h6 class="card-subtitle mb-2 text-body-secondary fs-16">
+              {{ course.subtitle }}
+            </h6>
+            <p class="card-text">
+              <span> {{ course.courseHours | decimalToTime }} </span><br />
+              <span>Contribution: ₹{{ course.amount }} </span>
+              <del
+                ><span
+                  ><span class="font-hi svelte-t3mcl"
+                    >₹{{ course.originalAmount }}</span
+                  ></span
+                ></del
+              >
+            </p>
+            <p class="badge bg-success">{{ course.language }}</p>
+            <div class="ps-0">
+              <button class="btn btn-outline-primary border-0 btn-sm">
+                Add to cart
+              </button>
+              <button class="btn btn-outline-primary border-0 btn-sm">
+                Enroll
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Other Helpful Video Series -->
+  <section class="helpful-series">
+    <div class="px-4">
+      <h5 class="h5 fw-600">Other Helpful Video Series</h5>
+    </div>
+    <div class="container-fluid px-4">
+      <div class="row border-top">
+        <div
+          class="card mb-3 border-0 card-hover"
+          style="max-width: 440px"
+          *ngFor="let relatedContent of relatedContentData; let i = index"
+        >
+          <div class="row g-0">
+            <div class="col-md-4 p-2">
+              <img
+                [src]="getImageUrl(relatedContent.thumbnail)"
+                alt=""
+                class="img-fluid rounded-2"
+              />
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title fs-18">{{ relatedContent.title }}</h5>
+                <p class="card-text mb-2">
+                  {{ relatedContent.subtitle }}
+                </p>
+                <p class="card-text" *ngIf="relatedContent.coursesCount">
+                  <small class="text-body-secondary"
+                    >{{ relatedContent.coursesCount }} Video Series</small
+                  >
+                </p>
+                <div *ngIf="relatedContent.courseHours">
+                  <p class="card-text">
+                    <span>
+                      {{ relatedContent.courseHours | decimalToTime }} </span
+                    ><br />
+                    <span>Contribution: ₹{{ relatedContent.amount }} </span>
+                  </p>
+                  <p class="badge bg-success">{{ relatedContent.language }}</p>
+                  <div class="ps-0">
+                    <button class="btn btn-outline-primary border-0 btn-sm">
+                      Add to cart
+                    </button>
+                    <button class="btn btn-outline-primary border-0 btn-sm">
+                      Enroll
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- faq section -->
+
+  <app-faq></app-faq>
+</main>
+<app-footer></app-footer>

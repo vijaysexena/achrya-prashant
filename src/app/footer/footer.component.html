@@ -1,0 +1,158 @@
+<footer class="footer mt-auto py-5 bg-footer-2 text-white">
+  <div class="container">
+    <div
+      class="row"
+      *ngIf="
+        jsonData &&
+        jsonData.LiveEvents &&
+        jsonData.Contents &&
+        jsonData.MoreData &&
+        jsonData.icons
+      "
+    >
+      <div class="col">
+        <h6 class="h6 text-white mb-4">LIVE EVENTS</h6>
+        <div
+          class="d-flex flex-column gap-2"
+          *ngFor="let liveEvent of jsonData.LiveEvents"
+        >
+          <a
+            [routerLink]="'#'"
+            class="link-light link-offset-2 link-underline link-underline-opacity-0 mb-1"
+            >{{ liveEvent }}
+          </a>
+        </div>
+      </div>
+      <div class="col">
+        <h6 class="h6 text-white mb-4">WISDOM CONTENT</h6>
+        <div
+          class="d-flex flex-column gap-2"
+          *ngFor="let content of jsonData.Contents"
+        >
+          <a
+            [routerLink]="'#'"
+            class="link-light link-offset-2 link-underline link-underline-opacity-0 mb-1"
+            >{{ content }}</a
+          >
+        </div>
+      </div>
+      <div class="col">
+        <h6 class="h6 text-white mb-4">MORE</h6>
+        <div
+          class="d-flex flex-column gap-2"
+          *ngFor="let more of jsonData.MoreData"
+        >
+          <a
+            [routerLink]="'#'"
+            class="link-light link-offset-2 link-underline link-underline-opacity-0 mb-1"
+            >{{ more }}</a
+          >
+        </div>
+      </div>
+      <div class="col">
+        <h6 class="h6 text-white mb-4">SOCIAL MEDIA</h6>
+        <div class="d-flex flex-column gap-2">
+          <a
+            [routerLink]="'#'"
+            class="link-light link-offset-2 link-underline link-underline-opacity-0 mb-1"
+            >For English</a
+          >
+          <a
+            [routerLink]="'#'"
+            class="link-light link-offset-2 link-underline link-underline-opacity-0 mb-1 d-flex gap-2"
+          >
+            <ng-container *ngFor="let icon of jsonData.icons">
+              <ng-container *ngIf="!(icon === 'threads' && !includeicons)">
+                <i [class]="'bi bi-' + icon"></i>
+              </ng-container>
+            </ng-container>
+          </a>
+          <a
+            [routerLink]="'#'"
+            class="link-light link-offset-2 link-underline link-underline-opacity-0 mb-1"
+            >For Hindi</a
+          >
+          <a
+            [routerLink]="'#'"
+            class="link-light link-offset-2 link-underline link-underline-opacity-0 d-flex gap-2"
+          >
+            <ng-container *ngFor="let icon of jsonData.icons">
+              <ng-container *ngIf="!(icon === 'wikipedia' && !includeicons)">
+                <i [class]="'bi bi-' + icon"></i>
+              </ng-container>
+            </ng-container>
+          </a>
+        </div>
+      </div>
+      <div class="col">
+        <h6 class="h6 text-white mb-4">DOWNLAOD APP</h6>
+        <div class="d-flex flex-column gap-2">
+          <a
+            routerLink="'#'"
+            class="link-light link-offset-2 link-underline link-underline-opacity-0 mb-1"
+          >
+            <img
+              src="./assets/img/profile-img.png"
+              class="img-fluid"
+              alt="prfile image"
+              width="25"
+              height="25"
+            />
+            Acharya Prashant</a
+          >
+
+          <a [routerLink]="'#'"
+            ><img
+              src="./assets/img/Google_Play-Badge-Logo.wine-cropped.svg"
+              alt="Get it on Google Play"
+              width="150px"
+              height="40px"
+              class="img-fluid"
+          /></a>
+          <a [routerLink]="'#'"
+            ><img
+              src="./assets/img/ios-logo.png"
+              alt="Get it on Google Play"
+              width="150px"
+              height="40px"
+              class="img-fluid"
+          /></a>
+        </div>
+      </div>
+      <div class="col">
+        <h6 class="h6 text-white mb-4">CONTACT US</h6>
+        <div class="d-flex flex-column gap-2">
+          <a
+            href="mailto:support@advait.org.in"
+            class="link-light link-offset-2 link-underline link-underline-opacity-0 mb-1"
+          >
+            <i class="bi bi-envelope me-1"></i>
+            support@advait.org.in</a
+          >
+          <a
+            href="tel: 9650585100"
+            class="link-light link-offset-2 link-underline link-underline-opacity-0 mb-1"
+            ><i class="bi bi-telephone me-1"></i> +91 9650585100</a
+          >
+        </div>
+      </div>
+    </div>
+    <div>
+      <hr class="hr mt-5 mb-3 m-auto" style="width: 800px" />
+      <div class="d-flex justify-content-center align-items-center gap-5 p-4">
+        <p class="mb-0 small opacity-70">
+          Copyright © 2022 PrashantAdvait Foundation
+        </p>
+        <div class="d-flex justify-content-center align-items-center gap-2">
+          <a [routerLink]="'#'" class="link-light link-underline-opacity-0">
+            Terms & Conditions
+          </a>
+          <div class="vr"></div>
+          <a [routerLink]="'#'" class="link-light link-underline-opacity-0">
+            Privacy Policy
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

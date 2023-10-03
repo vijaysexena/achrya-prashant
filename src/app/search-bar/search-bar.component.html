@@ -1,0 +1,131 @@
+<section class="quick-search">
+  <div class="container-fluid mb-3">
+    <div class="row align-items-center p-1 shadow-sm">
+      <div class="col-1">
+        <img
+          src="./assets/img/ic_videoseries.png"
+          width="100px"
+          class="img-fluid"
+          alt="logo video series"
+        />
+      </div>
+      <div class="col-5">
+        <div class="input-group" ngbDropdown>
+          <button
+            class="btn btn-outline-secondary dropdown-toggle fs-12 border-0 shadow-sm"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            ngbDropdownToggle
+          >
+            All
+          </button>
+          <ul class="dropdown-menu" ngbDropdownMenu #dropdown>
+            <ng-container *ngFor="let session of liveSessions">
+              <li
+                *ngIf="session.children && session.children.length > 0"
+                class="dropdown-submenu"
+                ngbDropdown
+              >
+                <a
+                  class="dropdown-item dropdown-toggle"
+                  href="#"
+                  ngbDropdownToggle
+                  [ngClass]="{ disabled: !isLevel1Clickable }"
+                >
+                  {{ session.name.english }}
+                </a>
+                <!-- Level 1 Dropdown Menu -->
+                <ul class="dropdown-menu" ngbDropdownMenu>
+                  <ng-container *ngFor="let subSession of session.children">
+                    <li
+                      *ngIf="
+                        subSession.children && subSession.children.length > 0
+                      "
+                      class="dropdown-submenu"
+                      ngbDropdown
+                    >
+                      <a
+                        class="dropdown-item dropdown-toggle"
+                        href="#"
+                        ngbDropdownToggle
+                      >
+                        {{ subSession.name.english }}
+                      </a>
+                      <!-- Level 2 Dropdown Menu -->
+                      <ul class="dropdown-menu">
+                        <li *ngFor="let subSubSession of subSession.children">
+                          <a
+                            class="dropdown-item"
+                            (click)="$event.stopPropagation()"
+                          >
+                            {{ subSubSession.name.english }}
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <!-- Level 2 Dropdown End -->
+                    <li
+                      *ngIf="
+                        !subSession.children || subSession.children.length === 0
+                      "
+                    >
+                      <a
+                        class="dropdown-item"
+                        (click)="$event.stopPropagation()"
+                      >
+                        {{ subSession.name.english }}
+                      </a>
+                    </li>
+                  </ng-container>
+                </ul>
+              </li>
+              <!-- Level 1 Dropdown End -->
+              <li *ngIf="!session.children || session.children.length === 0">
+                <a
+                  class="dropdown-item"
+                  [ngClass]="{ disabled: !isLevel1Clickable }"
+                  (click)="$event.stopPropagation()"
+                >
+                  {{ session.name.english }}
+                </a>
+              </li>
+            </ng-container>
+          </ul>
+
+          <input
+            type="text"
+            class="form-control"
+            aria-label="Text input with dropdown button"
+            placeholder="Search for video series"
+          />
+          <button
+            class="btn btn-sm btn-outline-dark bg-accent-primary-btn border-0"
+          >
+            <i class="bi bi-search"></i>
+          </button>
+        </div>
+      </div>
+      <div class="col text-end">
+        <button class="btn btn-sm bg-accent-primary text-white">Login</button>
+      </div>
+    </div>
+  </div>
+  <!-- breadcrumb -->
+  <div class="container-fluid">
+    <div class="col fs-14">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a
+              [routerLink]="'#'"
+              class="link link-offset-2 link-underline link-underline-opacity-0"
+              >Home</a
+            >
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">संतवाणी</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+</section>

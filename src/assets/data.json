@@ -1,0 +1,54 @@
+{
+  "LiveEvents": [
+    "Bhagavad Gita",
+    "Sant Sarita",
+    "Ashtavakra Samhita",
+    "Bodh Pratyusha"
+  ],
+  "Contents": ["Video Series", "AP Books", "AP Articles", "AP Circle"],
+  "MoreData": [
+    "About Acharya Prashant",
+    "Invite Him",
+    "Interview Him",
+    "Ghar Ghar Upanishad"
+  ],
+  "icons": [
+    "youtube",
+    "twitter",
+    "threads",
+    "facebook",
+    "instagram",
+    "wikipedia"
+  ],
+  "invitations": ["For a talk", "For an interview"],
+  "languages": ["Hindi", "English"],
+  "ManagementData": [
+    "Bhagavad Gita",
+    "Sant Sarita",
+    "Ashtavakra Samhita",
+    "Bodh Pratyusha",
+    "AP Books",
+    "AP Articles",
+    "Video Series",
+    "AP Circle",
+    "Invite For Talk",
+    "Invite For an Interview",
+    "Media and Public Interaction",
+    "Contact Us",
+    "Donate"
+  ],
+  "MoreAbout": [
+    "PrashantAdvait Foundation",
+    "Ghar Ghar Upanishad",
+    "About Acharya Prashant"
+  ],
+  "Categories": [
+    "Vedant - Upanishads",
+    "Vedant - Bhagavad Gita",
+    "Other Scriptures",
+    "Saints and Masters",
+    "Other streams",
+    "Life Questions",
+    "Technical Support"
+  ]
+}

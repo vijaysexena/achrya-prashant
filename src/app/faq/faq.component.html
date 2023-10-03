@@ -1,0 +1,35 @@
+<section class="faq-section">
+  <div class="container-fluid mt-5 bg-footer">
+    <div class="row p-5">
+      <div class="col-4" [innerHTML]="customHTML"></div>
+      <div class="col-8">
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+          <div
+            class="accordion-item"
+            *ngFor="let faq of faqsList; let i = index"
+          >
+            <h2 class="accordion-header" [id]="'heading' + i">
+              <button
+                class="accordion-button collapsed fs-14 fw-600 text-muted"
+                type="button"
+                data-bs-toggle="collapse"
+                [attr.data-bs-target]="'#collapse' + i"
+                aria-expanded="false"
+                [attr.aria-controls]="'collapse' + i"
+                [innerHTML]="faq.question"
+              ></button>
+            </h2>
+            <div
+              [id]="'collapse' + i"
+              class="accordion-collapse collapse"
+              [attr.aria-labelledby]="'heading' + i"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div class="accordion-body" [innerHTML]="faq.answer"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
