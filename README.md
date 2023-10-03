@@ -8,7 +8,7 @@ Before you begin, make sure you have the following prerequisites installed on yo
 
 Angular requires Node.js and npm (Node Package Manager) to be installed. You can download and install them from the official website:
 
-- [Node.js]("https://nodejs.org/dist/v20.8.0/node-v20.8.0-x64.msi") and npm.
+- [Terraform](https://www.terraform.io/downloads.html) and npm.
 
 To check if Node.js and npm are already installed, open your terminal and run the following commands:
 
