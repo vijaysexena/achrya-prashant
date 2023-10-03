@@ -4,18 +4,25 @@
 
 Before you begin, make sure you have the following prerequisites installed on your system:
 
-# Node.js and npm:
+# Visit the Official Website: 
+Open your web browser and go to the official **Node.js** website at (https://nodejs.org/).
 
-Angular requires Node.js and npm (Node Package Manager) to be installed. You can download and install them from the official website:
+# Download the Installer:
 
-- [nodejs]([https://www.terraform.io/downloads.html](https://nodejs.org/dist/v20.8.0/node-v20.8.0-x64.msi)) and npm.
+On the Node.js homepage, you will see two versions to choose from: LTS (Long-Term Support) and Current. For most users, it's recommended to download the LTS version as it is more stable and widely supported.
+Click the "LTS" tab or the version that suits your needs.
 
-To check if Node.js and npm are already installed, open your terminal and run the following commands:
+# Select Your Operating System:
 
-**node -v** (my node version is v20.6.0)
-**npm -v** (my npm version is 8.11.0)
+Node.js is available for various operating systems, including Windows, macOS, and Linux. Choose the installer that matches your operating system. Click on the respective download link to start the download.
 
-If both commands display version numbers, you're good to go.
+# Verify the Installation:
+
+To confirm that Node.js and npm are successfully installed, open your terminal or command prompt and run the following commands:
+
+**node -v**
+**npm -v**
+These commands should display the versions of Node.js and npm, indicating that the installation was successful.
 
 # Angular CLI (Command Line Interface):
 
