@@ -17,7 +17,7 @@
           *ngFor="let liveEvent of jsonData.LiveEvents"
         >
           <a
-            [routerLink]="'#'"
+            routerLink
             class="link-light link-offset-2 link-underline link-underline-opacity-0 mb-1"
             >{{ liveEvent }}
           </a>
@@ -30,7 +30,7 @@
           *ngFor="let content of jsonData.Contents"
         >
           <a
-            [routerLink]="'#'"
+            routerLink
             class="link-light link-offset-2 link-underline link-underline-opacity-0 mb-1"
             >{{ content }}</a
           >
@@ -43,7 +43,7 @@
           *ngFor="let more of jsonData.MoreData"
         >
           <a
-            [routerLink]="'#'"
+            routerLink
             class="link-light link-offset-2 link-underline link-underline-opacity-0 mb-1"
             >{{ more }}</a
           >
@@ -53,12 +53,12 @@
         <h6 class="h6 text-white mb-4">SOCIAL MEDIA</h6>
         <div class="d-flex flex-column gap-2">
           <a
-            [routerLink]="'#'"
+            routerLink
             class="link-light link-offset-2 link-underline link-underline-opacity-0 mb-1"
             >For English</a
           >
           <a
-            [routerLink]="'#'"
+            routerLink
             class="link-light link-offset-2 link-underline link-underline-opacity-0 mb-1 d-flex gap-2"
           >
             <ng-container *ngFor="let icon of jsonData.icons">
@@ -68,12 +68,11 @@
             </ng-container>
           </a>
           <a
-            [routerLink]="'#'"
             class="link-light link-offset-2 link-underline link-underline-opacity-0 mb-1"
             >For Hindi</a
           >
           <a
-            [routerLink]="'#'"
+            routerLink
             class="link-light link-offset-2 link-underline link-underline-opacity-0 d-flex gap-2"
           >
             <ng-container *ngFor="let icon of jsonData.icons">
@@ -88,7 +87,7 @@
         <h6 class="h6 text-white mb-4">DOWNLAOD APP</h6>
         <div class="d-flex flex-column gap-2">
           <a
-            routerLink="'#'"
+            routerLink
             class="link-light link-offset-2 link-underline link-underline-opacity-0 mb-1"
           >
             <img
@@ -101,7 +100,7 @@
             Acharya Prashant</a
           >
 
-          <a [routerLink]="'#'"
+          <a routerLink
             ><img
               src="./assets/img/Google_Play-Badge-Logo.wine-cropped.svg"
               alt="Get it on Google Play"
@@ -109,7 +108,7 @@
               height="40px"
               class="img-fluid"
           /></a>
-          <a [routerLink]="'#'"
+          <a routerLink
             ><img
               src="./assets/img/ios-logo.png"
               alt="Get it on Google Play"
@@ -144,11 +143,11 @@
           Copyright © 2022 PrashantAdvait Foundation
         </p>
         <div class="d-flex justify-content-center align-items-center gap-2">
-          <a [routerLink]="'#'" class="link-light link-underline-opacity-0">
+          <a routerLink class="link-light link-underline-opacity-0">
             Terms & Conditions
           </a>
           <div class="vr"></div>
-          <a [routerLink]="'#'" class="link-light link-underline-opacity-0">
+          <a routerLink class="link-light link-underline-opacity-0">
             Privacy Policy
           </a>
         </div>

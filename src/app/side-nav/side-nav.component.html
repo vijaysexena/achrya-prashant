@@ -21,7 +21,7 @@
   <div class="offcanvas-body">
     <div class="d-flex">
       <a
-        [routerLink]="'#'"
+        routerLink
         class="link-danger link-underline-opacity-0 link-underline fs-6 w-100"
       >
         <i class="bi bi-person-circle fs-2"></i>
@@ -34,7 +34,7 @@
       *ngFor="let management of jsonData.ManagementData"
     >
       <a
-        [routerLink]="'#'"
+        routerLink
         class="list-group-item list-group-item-action"
         aria-current="true"
       >
@@ -48,7 +48,7 @@
       *ngFor="let more of jsonData.MoreAbout"
     >
       <a
-        [routerLink]="'#'"
+        routerLink
         class="list-group-item list-group-item-action"
         aria-current="true"
       >
@@ -62,7 +62,7 @@
       *ngFor="let categories of jsonData.Categories"
     >
       <a
-        [routerLink]="'#'"
+        routerLink
         class="list-group-item list-group-item-action"
         aria-current="true"
       >
