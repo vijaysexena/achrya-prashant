@@ -41,6 +41,7 @@ You'll need Git to clone the Angular project from GitHub. If you don't have Git 
   To check if Git is installed, run the following command:
 
 **git --version** <br>
+
 If Git is installed, you'll see the version information.
 
 # Installation
