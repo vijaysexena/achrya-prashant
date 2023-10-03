@@ -20,8 +20,8 @@ Node.js is available for various operating systems, including Windows, macOS, an
 
 To confirm that Node.js and npm are successfully installed, open your terminal or command prompt and run the following commands:
 
-**node -v** <br>  return
-**npm -v**  <br>  return
+**node -v** <br>  
+**npm -v**  <br>  
 These commands should display the versions of Node.js and npm, indicating that the installation was successful.
 
 # Angular CLI (Command Line Interface):
